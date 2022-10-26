@@ -131,7 +131,7 @@ const DashboardScreen: React.FC<DashboardScreenProps> = (props) => {
                                 renderItem={(item) => (<Article article={item.item} />)}
                                 ItemSeparatorComponent={() => (<View style={styles.seperator} />)}
                                 onEndReached={() => {
-                                    if (!stop) {
+                                    if (!stop && text == "") {
                                         fetchArticles(page)
                                     }
                                 }}
